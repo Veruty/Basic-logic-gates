@@ -1,0 +1,16 @@
+@metadata
+meta.name=Basic Logic Gates
+meta.author=Veruty
+meta.version=2
+
+@gates
+gates.DefineGate.buffer=Buffer
+gates.DefineGate.inverter=Inverter
+gates.DefineGate.and=and
+gates.DefineGate.or=or
+gates.DefineGate.nand=nand
+gates.DefineGate.nor=nor
+gates.DefineGate.xor=xor
+gates.DefineGate.xnor=xnor
+gates.DefineGate.imply=imply
+gates.DefineGate.nimply=nimply
