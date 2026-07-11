@@ -1,6 +1,6 @@
 extends BaseGate
 
-var GateMeshInstance = MeshInstance3D.new()
+
 var GateMesh = BoxMesh.new()
 var ObjectMaterial = StandardMaterial3D.new()
 var Collider = CollisionShape3D.new()
@@ -18,8 +18,12 @@ func _definePegs() -> void:
 	Pegs[1].rotation_degrees = Vector3(0,0,90)
 	add_child(Pegs[0])
 	add_child(Pegs[1])
+		
+	Pegs[0].name = "In0"
+	Pegs[1].name = "Out0"
 	
 func _draw() -> void:
+	GateMeshInstance = MeshInstance3D.new()
 	add_child(GateMeshInstance)
 	add_child(Collider)
 	Collider.shape = ColliderShape
@@ -27,7 +31,7 @@ func _draw() -> void:
 	GateMeshInstance.scale = Vector3(0.3,0.3,0.3)
 	Collider.scale = GateMeshInstance.scale
 	ObjectMaterial.albedo_color = Color("#ffffff")
-	GateMeshInstance.material_overlay = ObjectMaterial
+	GateMeshInstance.material_override= ObjectMaterial
 
 func _gateBehaviour():
 	if Pegs[0].State == Peg.States.ON:

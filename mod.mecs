@@ -1,8 +1,8 @@
 @metadata
 meta.name=Basic Logic Gates
 meta.author=Veruty
-meta.version=3
-meta.supported_versions=0.1.0...0.9.3
+meta.version=4
+meta.supported_versions=1.0.0
 
 @gates
 gates.DefineGate.buffer=Buffer
